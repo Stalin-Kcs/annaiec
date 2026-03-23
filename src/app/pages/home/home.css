@@ -54,8 +54,7 @@
 }
 
 .hero-title .highlight {
-  color: #d6ff4b;
-  /* Lime green */
+  color: var(--light-green);
 }
 
 .hero-subtext {

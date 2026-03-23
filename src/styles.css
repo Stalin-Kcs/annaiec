@@ -272,30 +272,10 @@ h6 {
     color: var(--black2);
 }
 
-.black3 {
-    color: var(--black3);
-}
-
-.black4 {
-    color: var(--black4);
-}
-
-.black5 {
-    color: var(--bg-black-russian);
-}
-
-.black6 {
-    color: var(--black6);
-}
 
 .opacity-60 {
     opacity: 0.6;
 }
-
-.wrap-balance {
-    text-wrap: balance;
-}
-
 .radius-8 {
     border-radius: 8px;
 }
@@ -374,7 +354,6 @@ body {
 }
 
 @media screen and (max-width: 991px) {
-
     .btn-linkbox,
     .btn-lime-green {
         height: 47px !important;
