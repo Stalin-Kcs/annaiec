@@ -18,7 +18,7 @@ A modern, high-performance corporate website for **Annai Energy & Environmental 
 
 ## 🛠 Technology Stack
 
-- **Framework:** [Angular v19](https://angular.io/)
+- **Framework:** [Angular v21](https://angular.io/)
 - **Styling:** Vanilla CSS3 (Custom Design System) & [Bootstrap 5](https://getbootstrap.com/)
 - **Icons:** [Bootstrap Icons](https://icons.getbootstrap.com/) & [FontAwesome 6](https://fontawesome.com/)
 - **Animations:** [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/)
@@ -50,6 +50,12 @@ A modern, high-performance corporate website for **Annai Energy & Environmental 
    ```bash
    npm install bootstrap aos bootstrap-icons
    npm install --save-dev @types/aos
+   ```
+
+4. **Install Firebase Packages:**
+   ```bash
+   npm install firebase
+   npm install @angular/fire --force
    ```
 
 ### Development Server

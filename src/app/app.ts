@@ -1,8 +1,9 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import * as AOS from 'aos';
+import AOS from 'aos';
 import { Header } from './shared/header/header';
 import { Footer } from './shared/footer/footer';
+
 
 @Component({
   selector: 'app-root',
