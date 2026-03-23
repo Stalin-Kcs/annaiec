@@ -1,40 +1,95 @@
-.footer {
-  background-color: #083344;
-  color: white;
-  padding: 50px 0;
+.footer-fin {
+  background: linear-gradient(180deg, #0F2A2E 0%, #1F5C57 100%);
+  color: var(--white);
+  padding: 80px 0 0;
 }
 
-.footer h5 {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 15px;
+
+.text-lime {
+  color: var(--light-green) !important;
 }
 
-.footer p {
-  font-family: 'Roboto', sans-serif;
+.text-light-gray {
+  color: #D1D5DB !important;
 }
 
-.footer-links {
-  list-style: none;
-  padding: 0;
+.fs-14 {
+  font-size: 14px;
 }
 
-.footer-links li {
-  margin-bottom: 8px;
+.leading-160 {
+  line-height: 1.6;
 }
 
-.footer-links a {
-  color: white;
+.footer-title {
+  font-size: var(--text-20);
+  font-weight: 600;
+  color: var(--white);
+  border-bottom: 2px solid rgba(214, 255, 75, 0.4);
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.footer-socials .social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--light-green);
+  color: var(--green) !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-18);
+  transition: all 0.3s ease;
   text-decoration: none;
 }
 
-.footer-links a:hover {
-  color: var(--secondary-color);
+.footer-socials .social-icon:hover {
+  transform: translateY(-5px);
+  background-color: var(--white);
+  color: var(--green) !important;
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  margin-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 14px;
+.footer-links a {
+  color: #D1D5DB;
+  text-decoration: none;
+  font-size: var(--text-14);
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--light-green);
+  padding-left: 5px;
+}
+
+.footer-hr {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.scroll-top-btn {
+  width: 45px;
+  height: 45px;
+  background-color: #D6FF4B;
+  color: #0F2A2E;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--white);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(214, 255, 75, 0.3);
+}
+
+@media (max-width: 991px) {
+  .footer-fin {
+    padding-top: 60px;
+  }
 }

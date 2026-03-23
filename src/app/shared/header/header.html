@@ -1,42 +1,93 @@
-<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-  <div class="container">
+<header class="header-wrap" [class.sticky]="isSticky">
+  <div class="container h-100 position-static">
+    <nav class="navbar navbar-expand-lg h-100 position-static">
+      <a class="navbar-brand p-0 m-0" routerLink="/home">
+        <img class="dark-mode-item navbar-brand-item img-fluid" width="180" height="50" src="/images/home/logo.svg"
+          alt="Annai Energy & Environmental Consultant">
+      </a>
+      <!-- Responsive navbar toggler -->
+      <button class="navbar-toggler order-lg-1 order-2 me-xl-0  bar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+        aria-label="Toggle navigation" (click)="toggleNav()" [class.opened]="isNavOpen">
+        <div class="hamburger">
+          <svg class="w-burger noneblock" width="30" height="30" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+          <svg class="w-burger activeblock" width="30" height="30" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16">
+            </path>
+          </svg>
+        </div>
+      </button>
+      <!-- main navbar start-->
+      <div class="navbar-collapse collapse h-100" id="navbarCollapse">
+        <button class="navbar-toggler order-lg-1 order-2 me-xl-0  bar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+          aria-label="Toggle navigation" (click)="toggleNav()" [class.opened]="isNavOpen">
+          <div class="hamburger">
+            <svg class="w-burger noneblock" width="30" height="30" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <svg class="w-burger activeblock" width="30" height="30" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16">
+              </path>
+            </svg>
+          </div>
+        </button>
+        <!-- Nav main menu START -->
+        <ul class="navbar-nav align-items-lg-center ">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">About Us</a>
+          </li>
 
-    <!-- Logo -->
-    <a class="navbar-brand" routerLink="/">
-      ANNAI Energy
-    </a>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/achievements">Achievements</a>
+          </li>
 
-    <!-- Mobile menu -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contact Us</a>
+          </li>
 
-    <!-- Menu -->
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav ms-auto">
+
+
+
+        </ul>
+        <!-- Nav main menu END -->
+      </div>
+
+      <ul
+        class="navbar-nav bg-boxblenav ms-auto order-lg-2 order-1  align-items-lg-center me-lg-0  flex-row d-flex align-items-center">
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/">Home</a>
+          <a class="nav-link" href="tel:+919629508361">
+            <div class="helpned d-flex gap-2 align-items-center">
+              <div class="svghelp">
+                <img src="/images/home/call.svg" alt="Call us" class="img-fluid">
+              </div>
+              <div class="heltext">
+                <span>Call Us</span>
+                <span>+91 96295 08361</span>
+              </div>
+            </div>
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about">About Us</a>
+          <a class="nav-link btn btn-linkbox d-flex align-items-center" routerLink="/contact">
+            <span>Book Consultant</span>
+            <span class="bookbtnimg">
+              <img src="/images/home/arrow-btn.svg" width="14" height="14" alt="Book a consultant" class="img-fluid">
+            </span>
+          </a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/services">Services</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/achievements">Achievements</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contact">Contact Us</a>
-        </li>
-
       </ul>
-    </div>
-
+    </nav>
   </div>
-</nav>
+</header>
