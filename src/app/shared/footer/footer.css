@@ -1,0 +1,40 @@
+.footer {
+  background-color: #083344;
+  color: white;
+  padding: 50px 0;
+}
+
+.footer h5 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+}

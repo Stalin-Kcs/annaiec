@@ -1,0 +1,24 @@
+.custom-navbar {
+  background-color: var(--primary-color);
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: var(--secondary-color);
+}
+
+.nav-link {
+  color: white !important;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 15px;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color) !important;
+}
