@@ -480,3 +480,141 @@ a {
     padding-bottom: 60px;
   }
 }
+
+/* PREMIUM BANNER STYLES */
+.banner-premium {
+  position: relative;
+  height: calc(100dvh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0F2A2E 0%, #174240 100%);
+  color: var(--white);
+  overflow: hidden;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.banner-contact {
+  background-image: url('/images/banners/contact-bg.png');
+}
+
+.banner-achievements {
+  background-image: url('/images/banners/achievements-bg.png');
+}
+
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgb(31 92 87 / 83%) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.banner-label {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  font-size: var(--text-14);
+  font-weight: 600;
+  color: var(--light-green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  backdrop-filter: blur(5px);
+  margin-bottom: 25px;
+}
+
+.banner-title {
+  font-size: var(--text-60);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-subtext {
+  font-size: var(--text-20);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 700px;
+  margin: 0 auto 45px;
+  line-height: 1.6;
+}
+
+/* ACHIEVEMENT HIGHLIGHTS */
+.highlight-line {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+
+.highlight-item {
+  text-align: center;
+}
+
+.highlight-value {
+  display: block;
+  font-size: var(--text-32);
+  font-weight: 800;
+  color: var(--light-green);
+  margin-bottom: 4px;
+}
+
+.highlight-text {
+  font-size: var(--text-14);
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+/* BUTTONS */
+.btn-outline-white {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff !important;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  margin-right: 15px;
+}
+
+.btn-outline-white:hover {
+  background: #fff;
+  color: #0F2A2E !important;
+  border-color: #fff;
+}
+
+@media (max-width: 767px) {
+  .banner-premium {
+    padding: 60px 0;
+    min-height: 380px;
+  }
+
+  .banner-title {
+    font-size: var(--text-34);
+  }
+
+  .banner-subtext {
+    font-size: var(--text-14);
+  }
+
+  .highlight-line {
+    gap: 15px;
+  }
+}
