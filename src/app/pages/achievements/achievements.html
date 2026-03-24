@@ -1,1 +1,66 @@
-<p>achievements works!</p>
+<section class="subpage-header py-5">
+    <div class="container" data-aos="fade-down">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Achievements</li>
+            </ol>
+        </nav>
+        <h1 class="text-65 fw-bold mb-0">Achievements</h1>
+    </div>
+</section>
+
+<section class="achievements-section py-100">
+    <div class="container">
+        <!-- Filter Tabs -->
+        <div class="tabs-filter d-flex justify-content-center flex-wrap gap-3 mb-5" data-aos="fade-up">
+            <button *ngFor="let tab of tabs" [class.active]="activeTab === tab" (click)="activeTab = tab"
+                class="tab-btn px-4 py-2 border rounded-pill">
+                {{ tab }}
+            </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-4 achievements-grid">
+            <div *ngFor="let item of filteredAchievements" class="col-lg-3 col-md-6" data-aos="zoom-in">
+                <div class="achievement-card position-relative overflow-hidden rounded-4" (click)="openPopup(item)">
+                    <img [src]="item.image" [alt]="item.title" class="img-fluid w-100 h-100 object-fit-cover">
+                    <!-- Hover Overlay -->
+                    <div class="card-overlay p-4 d-flex flex-column justify-content-end">
+                        <div class="icon-arrow mb-3">
+                            <i class="bi bi-box-arrow-up-right fs-20 text-white"></i>
+                        </div>
+                        <h4 class="text-white text-20 fw-bold mb-1">{{ item.title }}</h4>
+                        <p class="text-uppercase text-12 fw-bold text-white ls-1 opacity-80 mb-0">{{ item.category }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- POPUP MODAL -->
+<div *ngIf="selectedProject" class="project-modal-backdrop d-flex align-items-center justify-content-center p-3"
+    (click)="closePopup()">
+    <div class="project-modal-content position-relative p-4 rounded-4 bg-white" (click)="$event.stopPropagation()">
+        <button class="close-btn btn btn-dark rounded-circle position-absolute" (click)="closePopup()">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6">
+                <img [src]="selectedProject.fullImage" [alt]="selectedProject.title" class="img-fluid rounded-3 shadow">
+            </div>
+            <div class="col-md-6">
+                <span class="text-uppercase text-12 text-green fw-bold ls-1 d-block mb-2">{{ selectedProject.category
+                    }}</span>
+                <h2 class="text-32 fw-bold mb-3">{{ selectedProject.title }}</h2>
+                <p class="text-16 opacity-70 mb-4">{{ selectedProject.description }}</p>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-check-circle-fill text-green fs-24"></i>
+                    <span class="fw-medium">Compliance Guaranteed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

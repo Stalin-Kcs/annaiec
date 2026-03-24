@@ -1,0 +1,148 @@
+/* ACHIEVEMENTS PAGE STYLES */
+
+.achievements-section {
+    background-color: var(--white);
+}
+
+/* FILTER TABS */
+.tabs-filter {
+    padding-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: var(--white);
+    color: var(--black2);
+    font-weight: 600;
+    font-size: var(--text-14);
+    border-color: #e5e7eb !important;
+    padding: 12px 28px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn.active {
+    background-color: var(--green);
+    color: var(--white);
+    border-color: var(--green) !important;
+    box-shadow: 0 10px 20px -5px rgba(25, 83, 83, 0.4);
+}
+
+/* ACHIEVEMENT CARD */
+.achievement-card {
+    height: 480px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    border: 2px solid var(--grey-bg-2);
+    padding: 5px;
+}
+
+.achievement-card img {
+    transition: transform 0.6s ease;
+}
+
+.achievement-card:hover img {
+    transform: scale(1.1);
+}
+
+/* HOVER OVERLAY */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(15, 42, 46, 0) 50%, rgba(15, 42, 46, 0.95) 100%);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.achievement-card:hover .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.icon-arrow {
+    background-color: var(--green);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* POPUP MODAL */
+.project-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+}
+
+.project-modal-content {
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.4s ease;
+    overflow-x: hidden;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border: 2px solid white;
+}
+
+.text-green {
+    color: var(--green);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .achievement-card {
+        height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tab-btn {
+        width: 100%;
+    }
+
+    .project-modal-content {
+        padding: 30px 20px !important;
+    }
+}
