@@ -484,7 +484,7 @@ a {
 /* PREMIUM BANNER STYLES */
 .banner-premium {
   position: relative;
-  height: calc(100dvh - 80px);
+  height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -504,6 +504,18 @@ a {
 
 .banner-achievements {
   background-image: url('/images/banners/achievements-bg.png');
+}
+
+.banner-faq {
+  background-image: url('/images/home/energy-banner.jpg');
+}
+
+.banner-privacy {
+  background-image: url('/images/home/hero-fin.jpg');
+}
+
+.banner-terms {
+  background-image: url('/images/home/cta-bg.jpg');
 }
 
 

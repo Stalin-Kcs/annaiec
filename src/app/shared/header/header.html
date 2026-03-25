@@ -1,7 +1,7 @@
 <header class="header-wrap" [class.sticky]="isSticky">
   <div class="container h-100 position-static">
     <nav class="navbar navbar-expand-lg h-100 position-static">
-      <a class="navbar-brand p-0 m-0" routerLink="/home">
+      <a class="navbar-brand p-0 m-0" routerLink="/home" (click)="closeNav()">
         <img class="dark-mode-item navbar-brand-item img-fluid" width="180" height="50" src="/images/home/logo.svg"
           alt="Annai Energy & Environmental Consultant">
       </a>
@@ -41,18 +41,18 @@
         <!-- Nav main menu START -->
         <ul class="navbar-nav align-items-lg-center ">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
+            <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="closeNav()">About Us</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
+            <a class="nav-link" routerLink="/services" routerLinkActive="active" (click)="closeNav()">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/achievements" routerLinkActive="active">Achievements</a>
+            <a class="nav-link" routerLink="/achievements" routerLinkActive="active" (click)="closeNav()">Achievements</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="closeNav()">Contact Us</a>
           </li>
         </ul>
         <!-- Nav main menu END -->
@@ -78,7 +78,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link btn btn-linkbox d-flex align-items-center" routerLink="/contact">
+          <a class="nav-link btn btn-linkbox d-flex align-items-center" routerLink="/contact" (click)="closeNav()">
             <span>Book Consultant</span>
             <span class="bookbtnimg">
               <img src="/images/home/arrow-btn.svg" width="14" height="14" alt="Book a consultant" class="img-fluid">

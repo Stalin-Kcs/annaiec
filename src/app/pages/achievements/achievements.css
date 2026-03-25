@@ -133,11 +133,15 @@
 /* RESPONSIVE */
 @media (max-width: 991px) {
     .achievement-card {
-        height: 400px;
+        height: 500px;
     }
 }
 
 @media (max-width: 767px) {
+    .achievement-card {
+        height: 120vw;
+    }
+
     .tab-btn {
         width: 100%;
     }

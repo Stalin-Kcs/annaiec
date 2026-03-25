@@ -1,0 +1,79 @@
+.faq-section {
+  background-color: var(--white);
+}
+
+.faq-item {
+  border-radius: 20px !important;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.faq-item .accordion-button {
+  padding: 25px 30px;
+  background-color: var(--white);
+  color: var(--black2);
+  font-size: var(--text-20);
+  font-weight: 700;
+  box-shadow: none !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.faq-item .accordion-button:after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Toggle chevron button */
+.faq-item .accordion-button .accordion-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-color: #0f2a2e; /* dark teal */
+  color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+}
+
+/* Expanded State for Header */
+.faq-item .accordion-button:not(.collapsed) {
+  background-color: var(--green); /* dark teal */
+  color: var(--white);
+}
+
+.faq-item .accordion-button:not(.collapsed) .accordion-icon {
+  background-color: var(--light-green); /* lime green toggle */
+  color: var(--green);
+  transform: rotate(180deg);
+}
+
+/* Expanded Body style to match image */
+.faq-item .accordion-body {
+  padding: 25px 30px;
+  background-color: #f8fafc; /* light grey/blue */
+  color: var(--black3);
+  font-size: var(--text-16);
+  line-height: 1.7;
+  border-top: none;
+}
+
+.ls-1 {
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 991px) {
+  .faq-item .accordion-button {
+    font-size: var(--text-18);
+    padding: 20px;
+  }
+}

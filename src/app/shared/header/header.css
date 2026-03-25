@@ -281,6 +281,15 @@ body {
     color: var(--white);
   }
 
+  .header-wrap .navbar .navbar-nav>.nav-item>.nav-link.active {
+    background-color: var(--light-green) !important;
+    color: var(--green) !important;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 10px 15px !important;
+    margin: 5px 0;
+  }
+
 
   .navbar-collapse .navbar-toggler {
     width: 47px;

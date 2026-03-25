@@ -19,4 +19,12 @@ export class Header {
   toggleNav() {
     this.isNavOpen = !this.isNavOpen;
   }
+
+  closeNav() {
+    this.isNavOpen = false;
+    const navbarCollapse = document.getElementById('navbarCollapse');
+    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.remove('show');
+    }
+  }
 }
