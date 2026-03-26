@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import AOS from 'aos';
+import * as AOS from 'aos';
 import { Header } from './shared/header/header';
 import { Footer } from './shared/footer/footer';
 
@@ -13,7 +13,7 @@ import { Footer } from './shared/footer/footer';
 })
 export class App implements AfterViewInit {
     ngAfterViewInit() {
-    AOS.init({
+    (AOS as any).init({
       duration: 1000,
       once: true
     });
