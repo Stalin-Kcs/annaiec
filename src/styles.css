@@ -296,7 +296,7 @@ h6 {
 }
 
 html {
-  overflow-x: clip;
+  overflow-x: hidden;
   scrollbar-width: thin;
 }
 
@@ -304,7 +304,7 @@ body {
   font-family: "Outfit", sans-serif;
   font-size: var(--text-16);
   color: var(--black);
-  overflow-x: clip;
+  overflow-x: hidden;
   font-weight: 400;
   text-rendering: optimizeSpeed;
   -moz-osx-font-smoothing: grayscale;

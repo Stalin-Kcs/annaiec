@@ -431,3 +431,66 @@
   color: var(--green) !important;
   border-color: var(--green) !important;
 }
+
+/* SERVICE INDUSTRIES SECTION */
+.industry-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: var(--grey-bg-2);
+  overflow: hidden;
+}
+
+.industry-image {
+  height: 250px;
+  width: 100%;
+}
+
+.industry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px !important;
+}
+
+/* HOVER EFFECT: ONLY BG COLOR CHANGE */
+.hover-green:hover {
+  background-color: var(--green) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(25, 83, 83, 0.2);
+}
+
+.hover-green:hover h3,
+.hover-green:hover .industry-label,
+.hover-green:hover .industry-desc,
+.hover-green:hover p,
+.hover-green:hover .benefits-title,
+.hover-green:hover .benefits-list li {
+  color: var(--white) !important;
+}
+
+.hover-green:hover .industry-label,
+.hover-green:hover p {
+  opacity: 0.9;
+}
+
+.hover-green:hover .benefits-list li i {
+  color: var(--light-green);
+}
+
+.benefits-list li i {
+  color: var(--green);
+  transition: color 0.3s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .industry-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .industry-image {
+    height: 200px;
+  }
+}

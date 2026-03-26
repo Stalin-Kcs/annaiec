@@ -46,7 +46,7 @@
       <!-- Left Column: Form -->
       <div class="col-lg-7" data-aos="fade-right">
         <div class="section-label d-flex align-items-center gap-2 mb-3">
-          <span class="text-uppercase fw-bold ls-1">Contact Us</span>
+          <span class="text-uppercase fw-bold ls-1 text-12 green">Contact Us</span>
         </div>
         <h2 class="text-40 fw-bold mb-3">Get Expert Consulting Support</h2>
         <p class="text-16 opacity-70 mb-5">
@@ -58,69 +58,44 @@
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form row g-4">
           <div class="col-12">
             <input type="text" class="form-control" formControlName="name" placeholder="Your Full Name *" required>
+            @if(contactForm.get('name')?.touched && contactForm.get('name')?.hasError('required'))
+            {
+            <div class="text-danger text-14 mt-1 ms-2">Please enter your full name.</div>
+            }
+            @if(contactForm.get('name')?.touched && contactForm.get('name')?.hasError('minlength'))
+            {
+            <div class="text-danger text-14 mt-1 ms-2">Your full name must be at least 3 characters long.</div>
+            }
+            @if(contactForm.get('name')?.touched && contactForm.get('name')?.hasError('pattern'))
+            {
+            <div class="text-danger text-14 mt-1 ms-2">Your full name must be alphanumeric and spaces only.</div>
+            }
           </div>
-          @if(contactForm.get('name')?.touched && contactForm.get('name')?.hasError('required'))
-          {
-          <div class="col-12">
-            <div class="alert alert-danger" role="alert">
-              Please enter your full name.
-            </div>
-          </div>
-          }
-          @if(contactForm.get('name')?.touched && contactForm.get('name')?.hasError('minlength'))
-          {
-          <div class="col-12">
-            <div class="alert alert-danger" role="alert">
-              Your full name must be at least 3 characters long.
-            </div>
-          </div>
-          }
-          @if(contactForm.get('name')?.touched && contactForm.get('name')?.hasError('pattern'))
-          {
-          <div class="col-12">
-            <div class="alert alert-danger" role="alert">
-              Your full name must be alphanumeric and spaces only
-            </div>
-          </div>
-          }
+
           <div class="col-12">
             <input type="tel" class="form-control" formControlName="phone" placeholder="Your Phone Number *" required>
+            @if(contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('required'))
+            {
+            <div class="text-danger text-14 mt-1 ms-2">Please enter your phone number.</div>
+            }
+            @if(contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('pattern'))
+            {
+            <div class="text-danger text-14 mt-1 ms-2">Please enter a valid phone number.</div>
+            }
           </div>
-          @if(contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('required'))
-          {
-          <div class="col-12">
-            <div class="alert alert-danger" role="alert">
-              Please enter your phone number.
-            </div>
-          </div>
-          }
-          @if(contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('pattern'))
-          {
-          <div class="col-12">
-            <div class="alert alert-danger" role="alert">
-              Please enter a valid phone number.
-            </div>
-          </div>
-          }
+
           <div class="col-12">
             <input type="email" class="form-control" formControlName="email" placeholder="Your Email ID *" required>
+            @if(contactForm.get('email')?.touched && contactForm.get('email')?.hasError('required'))
+            {
+            <div class="text-danger text-14 mt-1 ms-2">Please enter your email address.</div>
+            }
+            @if(contactForm.get('email')?.touched && contactForm.get('email')?.hasError('email'))
+            {
+            <div class="text-danger text-14 mt-1 ms-2">Please enter a valid email address.</div>
+            }
           </div>
-          @if(contactForm.get('email')?.touched && contactForm.get('email')?.hasError('required'))
-          {
-          <div class="col-12">
-            <div class="alert alert-danger" role="alert">
-              Please enter your email address.
-            </div>
-          </div>
-          }
-          @if(contactForm.get('email')?.touched && contactForm.get('email')?.hasError('email'))
-          {
-          <div class="col-12">
-            <div class="alert alert-danger" role="alert">
-              Please enter a valid email address.
-            </div>
-          </div>
-          }
+
           <div class="col-12">
             <textarea class="form-control" formControlName="message" placeholder="Message Here" rows="4"></textarea>
           </div>
@@ -172,7 +147,7 @@
       <div class="col-lg-5" data-aos="fade-left">
         <div class="info-content">
           <div class="section-label d-flex align-items-center gap-2 mb-3">
-            <span class="text-uppercase fw-bold ls-1 text-12">Reach Out</span>
+            <span class="text-uppercase fw-bold ls-1 text-12 green text-12">Reach Out</span>
           </div>
           <h2 class="text-34 fw-bold mb-4">Connect With Our Technical Specialists</h2>
 

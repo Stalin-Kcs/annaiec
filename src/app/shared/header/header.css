@@ -170,6 +170,7 @@ body {
 .header-wrap .navbar .bg-boxblenav li.nav-item a.nav-link {
   font-weight: 400;
   font-size: var(--text-16);
+  padding: 0;
 }
 
 .helpned {
