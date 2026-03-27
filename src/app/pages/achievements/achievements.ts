@@ -10,16 +10,16 @@ import { RouterModule } from '@angular/router';
   styleUrl: './achievements.css',
 })
 export class Achievements {
-  activeTab: string = 'All';
+  activeTab: string = 'ALL';
   selectedProject: any = null;
 
-  tabs = ['All', 'Energy Audits', 'Electrical Systems', 'Water Management', 'Infrastructure Repairs'];
+  tabs = ['ALL', 'DEWA, DUBAI', 'HONORABLE POWER MINISTER PIYUSH GOYAL', 'BEE TO CPIO', 'CEA'];
 
   achievements = [
     {
       id: 1,
       title: 'Industrial HVAC Optimization',
-      category: 'Energy Audits',
+      category: 'DEWA, DUBAI',
       image: '/images/achievements/gallery-1.jpg',
       fullImage: '/images/achievements/gallery-1.jpg',
       description: 'Optimized the HVAC system for a large manufacturing plant, resulting in 20% energy savings.'
@@ -27,7 +27,7 @@ export class Achievements {
     {
       id: 2,
       title: 'Solar Panel Installation',
-      category: 'Electrical Systems',
+      category: 'HONORABLE POWER MINISTER PIYUSH GOYAL',
       image: '/images/achievements/gallery-2.jpg',
       fullImage: '/images/achievements/gallery-2.jpg',
       description: 'Comprehensive electrical audit of an automotive facility to ensuring fire safety and efficiency.'
@@ -35,7 +35,7 @@ export class Achievements {
     {
       id: 3,
       title: 'Water Treatment Plant (WTP)',
-      category: 'Water Management',
+      category: 'BEE TO CPIO',
       image: '/images/achievements/gallery-3.jpg',
       fullImage: '/images/achievements/gallery-3.jpg',
       description: 'Restructured the Sewage Treatment Plant protocols to meet environmental compliance standards.'
@@ -43,7 +43,7 @@ export class Achievements {
     {
       id: 4,
       title: 'Building Foundation Repair',
-      category: 'Infrastructure Repairs',
+      category: 'CEA',
       image: '/images/achievements/gallery-4.jpg',
       fullImage: '/images/achievements/gallery-4.jpg',
       description: 'Waterproofing and structural reinforcement of a high-rise basement infrastructure.'
@@ -51,7 +51,7 @@ export class Achievements {
   ];
 
   get filteredAchievements() {
-    if (this.activeTab === 'All') return this.achievements;
+    if (this.activeTab === 'ALL') return this.achievements;
     return this.achievements.filter(a => a.category === this.activeTab);
   }
 
