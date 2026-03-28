@@ -13,7 +13,7 @@ export class Achievements {
   activeTab: string = 'ALL';
   selectedProject: any = null;
 
-  tabs = ['ALL', 'DEWA, DUBAI', 'HONORABLE POWER MINISTER PIYUSH GOYAL', 'BEE TO CPIO', 'CEA'];
+  tabs = ['ALL', 'DEWA, DUBAI', 'HONORABLE PIYUSH GOYAL', 'BEE', 'CEA'];
 
   achievements = [
     {
@@ -27,7 +27,7 @@ export class Achievements {
     {
       id: 2,
       title: 'Solar Panel Installation',
-      category: 'HONORABLE POWER MINISTER PIYUSH GOYAL',
+      category: 'HONORABLE PIYUSH GOYAL',
       image: '/images/achievements/gallery-2.jpg',
       fullImage: '/images/achievements/gallery-2.jpg',
       description: 'Comprehensive electrical audit of an automotive facility to ensuring fire safety and efficiency.'
@@ -35,7 +35,7 @@ export class Achievements {
     {
       id: 3,
       title: 'Water Treatment Plant (WTP)',
-      category: 'BEE TO CPIO',
+      category: 'BEE',
       image: '/images/achievements/gallery-3.jpg',
       fullImage: '/images/achievements/gallery-3.jpg',
       description: 'Restructured the Sewage Treatment Plant protocols to meet environmental compliance standards.'
